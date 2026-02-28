@@ -1,6 +1,6 @@
 # Bird Knowledge
 
-Experimental knowledge graph of bird conservation initiatives, species, habitats, and practices. It uses some principles from [Foam](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode), storing data in readable/editatble markdown format, designed to make management of links and entities relatively simple.
+Experimental knowledge graph of bird conservation initiatives, species, habitats, plans, projects, topics, and priorities. It uses some principles from [Foam](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode), storing data in readable/editatble markdown format, designed to make management of links and entities relatively simple.
 
 Data structure will be maintained through a python script, which will do the following:
 
@@ -11,14 +11,40 @@ Data structure will be maintained through a python script, which will do the fol
 
 This project is **Experimental**.
 
+## Notes
+
+Can embed YAML in markdown - create explicit links when writing notes/plan notes
+
+Example:
+
+```yaml
+node: north-carolina-wildlife-reources-commission
+type: project-owner
+attributes:
+    joined: "2026-02-28"
+```
+
 ## TO DO
 
 * structure this repository to adhere to Jekyll formatting
 * use python script to organize into pre-formatted page structures
 * develop templates for different entity types, highlighting links to other pages.
+* Make this database integral with NCPIF webpage - hosted by Github in Github Pages
 * Consider hiding notes from git? dynamic gitignore based on yaml possible?
     * if YAML content says to hide - add to .gitignore in python
     * PyYAML
+* Themes to consdier in Jekyll
+    * [Minima](https://jekyll.github.io/minima/)
+    * [Minimal](https://pages-themes.github.io/minimal/)
+    * [RetLab](https://ben.balter.com/) ([see here for installing remote themes](https://github.com/benbalter/jekyll-remote-theme))
+    * [Tabler](https://www.bestjekyllthemes.com/theme/tabler-tabler/)
+    * [Serif](https://www.bestjekyllthemes.com/theme/zerostaticthemes-jekyll-serif-theme/)
+    * [Chirpy](https://www.bestjekyllthemes.com/theme/cotes2020-jekyll-theme-chirpy/)
+* RSS Feed from website for blog posts:
+    * GitHub Actions: Utilize a GitHub Action like the [RSS Feed Fetch Action](https://github.com/marketplace/actions/rss-feed-fetch-action) or FeedsFetcher to automate fetching and generating static feed files within your repository.
+    * External Tools/Services: Services like openrss.org can generate a feed for GitHub Issues pages by prepending openrss.org/ to the GitHub URL. Tools like [html2rss](https://html2rss.github.io/) can also convert any website content into an RSS feed.
+* Ability to add link to open notes page in google docs?
+    * how to get meeting notes seamlessly into other formats for sharing (e.g., word doc or google)?
 
 ## Markdown Interpretation
 
@@ -34,6 +60,7 @@ Note date determines premacy of information. The `update-bird-knowledge.py` scri
 
 * title
 * date - date of meeting/note
+* type - meeting-notes, plan-notes, project-notes, etc.
 * key - calculated key value
 * hide - indicator if this note should be ignored, and not processed
 * update - date the note was last processed
@@ -78,6 +105,9 @@ A key challenge in maintaining Knowledge Graphs is creating and maintaining conn
 * Geography
 * People
 * Priorities
+* Plan
+* Project
+* Practices (or Topics)
 
 ### Properties
 
