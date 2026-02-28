@@ -33,7 +33,7 @@ attributes:
 * Consider hiding notes from git? dynamic gitignore based on yaml possible?
     * if YAML content says to hide - add to .gitignore in python
     * PyYAML
-* Themes to consdier in Jekyll
+* Themes to consdier in Jekyll: [how to install](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
     * [Minima](https://jekyll.github.io/minima/)
     * [Minimal](https://pages-themes.github.io/minimal/)
     * [RetLab](https://ben.balter.com/) ([see here for installing remote themes](https://github.com/benbalter/jekyll-remote-theme))
