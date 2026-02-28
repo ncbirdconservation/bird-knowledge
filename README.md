@@ -2,7 +2,23 @@
 
 Experimental knowledge graph of bird conservation initiatives, species, habitats, and practices. It uses some principles from [Foam](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode), storing data in readable/editatble markdown format, designed to make management of links and entities relatively simple.
 
+Data structure will be maintained through a python script, which will do the following:
+
+* update a MongoDB implementation
+* translate and maintain links to entities
+* update notes to provide proper links to nodes
+* update note YAML to reflect links
+
 This project is **Experimental**.
+
+## TO DO
+
+* structure this repository to adhere to Jekyll formatting
+* use python script to organize into pre-formatted page structures
+* develop templates for different entity types, highlighting links to other pages.
+* Consider hiding notes from git? dynamic gitignore based on yaml possible?
+    * if YAML content says to hide - add to .gitignore in python
+    * PyYAML
 
 ## Markdown Interpretation
 
@@ -14,15 +30,32 @@ The notes folder contains markdown files. These are the source data the python s
 
 Note date determines premacy of information. The `update-bird-knowledge.py` script will parse notes files ,create or update appropriate nodes and edges, and modify documents to link to appropriate nodes and edges using markdown syntax (e.g., [note template](./notes/note_template.md)).
 
-Required Headings:
-* Title
-* Date
-* Update Date
+### Required YAML
 
-Recognized Headings:
-* Attendees
-* Action Items
-* Links
+* title
+* date - date of meeting/note
+* key - calculated key value
+* hide - indicator if this note should be ignored, and not processed
+* update - date the note was last processed
+* edges - calculated list of nodes linked in this note
+
+#### YAML Edge Examples
+
+Consider whether this is necessary.
+
+```
+edges:
+    - to: "scott-k-anderson"
+      type: "attendee"
+      edge-key: "osa7098awu43ohj"
+    - to: "eastern-working-group-partners-in-flight"
+      type: "meeting-note"
+      edge-key: "apwepoihanfn"
+```
+
+### Link Translation
+
+Document will attempt to 
 
 ## Translation
 
