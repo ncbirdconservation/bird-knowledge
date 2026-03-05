@@ -43,6 +43,7 @@ attributes:
 * RSS Feed from website for blog posts:
     * GitHub Actions: Utilize a GitHub Action like the [RSS Feed Fetch Action](https://github.com/marketplace/actions/rss-feed-fetch-action) or FeedsFetcher to automate fetching and generating static feed files within your repository.
     * External Tools/Services: Services like openrss.org can generate a feed for GitHub Issues pages by prepending openrss.org/ to the GitHub URL. Tools like [html2rss](https://html2rss.github.io/) can also convert any website content into an RSS feed.
+* [Jekyll Documentation](https://jekyllrb.com/docs/pages/)
 * Ability to add link to open notes page in google docs?
     * how to get meeting notes seamlessly into other formats for sharing (e.g., word doc or google)?
 
@@ -54,7 +55,7 @@ Markdown documents are parsed to key/value pairs and arrays based on heading/con
 
 The notes folder contains markdown files. These are the source data the python script will use to populate the nodes and edges documents. In addition, the python script may augment notes to improve links and readability.
 
-Note date determines premacy of information. The `update-bird-knowledge.py` script will parse notes files ,create or update appropriate nodes and edges, and modify documents to link to appropriate nodes and edges using markdown syntax (e.g., [note template](./notes/note_template.md)).
+Note date determines premacy of information. The `update-bird-knowledge.py` script will parse notes files ,create or update appropriate nodes and edges, and modify documents to link to appropriate nodes and edges using markdown syntax (e.g., [note template](notes/_note_template.md)).
 
 ### Required YAML
 
@@ -103,7 +104,7 @@ A key challenge in maintaining Knowledge Graphs is creating and maintaining conn
 * Habitat
 * Organization
 * Geography
-* People
+* Person
 * Priorities
 * Plan
 * Project
