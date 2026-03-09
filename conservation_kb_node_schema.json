@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gist.githubusercontent.com/ncbirdconservation/15ac248b1679dc25145fbc741621f07f/raw/8f85f385a529b978acee09b8085bb692c2dbb032/conservation_kb_node_schema.json",
+  "title": "Conservation Knowledge Base Node Schema",
+  "description": "Node Schema for the Conservation Knowledge Base",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Unique identifier for this record",
+      "minLength": 1
+    },
+    "short_key": {
+      "type": "string",
+      "description": "Short version of key identifier - used for edges",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "description": "The title for the record.",
+      "minLength": 1
+    },
+    "item_type": {
+      "#ref": "#/$defs/itemType"
+    },
+    "modified_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "url": {
+      "type": "string",
+      "description": "Primary link location for item."
+    },
+    "description": {
+      "type": "string",
+      "description": "Long description of the item."
+    },
+    "citation": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "page": {
+      "type": "string",
+      "description": "Markdown-formatted custom content for item."
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "item_properties": {
+      "type": "array",
+      "description": "Array of key/value pairs of descriptive properties",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "$defs": {
+    "item_type": {
+      "type": "string",
+      "description": "Type of item this node represents.",
+      "enum": [
+        "Species",
+        "Habitat",
+        "Organization",
+        "Geography",
+        "Person",
+        "Priority",
+        "Plan",
+        "Project",
+        "Practices",
+        "Resource"
+      ]
+    }
+  }
+}

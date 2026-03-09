@@ -1,4 +1,17 @@
-# Bird Knowledge
+# Bird Knowledge Project
+
+The bird consevation world is complex. There are initiatives, government, NGO, and private groups with interests in conserving birds or the ecological systems they depend upaon.
+
+## Purpose
+
+Building a connected Knowledge Base/Social Network Analysis
+
+## Challenges
+
+* **Building**: A useful resource will contain links that were not obvious prior, and the current conservation space is vast.
+* **Maintenance**: These relationships are dynamic, organizations change. Keeping the data current will be a significant challenge.
+
+# Bird Knowledge Base
 
 Experimental knowledge graph of bird conservation initiatives, species, habitats, plans, projects, topics, and priorities. It uses some principles from [Foam](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode), storing data in readable/editatble markdown format, designed to make management of links and entities relatively simple.
 
@@ -21,37 +34,14 @@ Example:
 node: north-carolina-wildlife-reources-commission
 type: project-owner
 attributes:
-    joined: "2026-02-28"
+  joined: "2026-02-28"
 ```
-
-## TO DO
-
-* structure this repository to adhere to Jekyll formatting
-* use python script to organize into pre-formatted page structures
-* develop templates for different entity types, highlighting links to other pages.
-* Make this database integral with NCPIF webpage - hosted by Github in Github Pages
-* Consider hiding notes from git? dynamic gitignore based on yaml possible?
-    * if YAML content says to hide - add to .gitignore in python
-    * PyYAML
-* Themes to consdier in Jekyll: [how to install](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
-    * [Minima](https://jekyll.github.io/minima/)
-    * [Minimal](https://pages-themes.github.io/minimal/)
-    * [RetLab](https://ben.balter.com/) ([see here for installing remote themes](https://github.com/benbalter/jekyll-remote-theme))
-    * [Tabler](https://www.bestjekyllthemes.com/theme/tabler-tabler/)
-    * [Serif](https://www.bestjekyllthemes.com/theme/zerostaticthemes-jekyll-serif-theme/)
-    * [Chirpy](https://www.bestjekyllthemes.com/theme/cotes2020-jekyll-theme-chirpy/)
-* RSS Feed from website for blog posts:
-    * GitHub Actions: Utilize a GitHub Action like the [RSS Feed Fetch Action](https://github.com/marketplace/actions/rss-feed-fetch-action) or FeedsFetcher to automate fetching and generating static feed files within your repository.
-    * External Tools/Services: Services like openrss.org can generate a feed for GitHub Issues pages by prepending openrss.org/ to the GitHub URL. Tools like [html2rss](https://html2rss.github.io/) can also convert any website content into an RSS feed.
-* [Jekyll Documentation](https://jekyllrb.com/docs/pages/)
-* Ability to add link to open notes page in google docs?
-    * how to get meeting notes seamlessly into other formats for sharing (e.g., word doc or google)?
 
 ## Markdown Interpretation
 
 Markdown documents are parsed to key/value pairs and arrays based on heading/content and unordered lists (respectively).
 
-## Notes
+## Notes Folder
 
 The notes folder contains markdown files. These are the source data the python script will use to populate the nodes and edges documents. In addition, the python script may augment notes to improve links and readability.
 
@@ -71,14 +61,14 @@ Note date determines premacy of information. The `update-bird-knowledge.py` scri
 
 Consider whether this is necessary.
 
-```
+```yaml
 edges:
-    - to: "scott-k-anderson"
-      type: "attendee"
-      edge-key: "osa7098awu43ohj"
-    - to: "eastern-working-group-partners-in-flight"
-      type: "meeting-note"
-      edge-key: "apwepoihanfn"
+  - to: "scott-k-anderson"
+    type: "attendee"
+    edge-key: "osa7098awu43ohj"
+  - to: "eastern-working-group-partners-in-flight"
+    type: "meeting-note"
+    edge-key: "apwepoihanfn"
 ```
 
 ### Link Translation
@@ -89,23 +79,24 @@ Document will attempt to
 
 A key challenge in maintaining Knowledge Graphs is creating and maintaining connections between entities. The translation.json file will maintain relationships to entity and relationship keys by maintaining common aliases. For example:
 
-```
-    {
-        "Wildlife Resources Commission" : "north-carolina-wildlife-resources-commission",
-        "NCWRC" : "north-carolina-wildlife-resources-commission",
-        "House Wren" : "northern-house-wren"
-    }
+```yaml
+  {
+    "Wildlife Resources Commission" : "north-carolina-wildlife-resources-commission",
+    "NCWRC" : "north-carolina-wildlife-resources-commission",
+    "House Wren" : "northern-house-wren"
+  }
 ```
 
 ## Entities
 
 ### Types
+
 * Species
 * Habitat
 * Organization
 * Geography
 * Person
-* Priorities
+* Priority
 * Plan
 * Project
 * Practices (or Topics)
@@ -114,7 +105,12 @@ A key challenge in maintaining Knowledge Graphs is creating and maintaining conn
 
 Each node should have a list of properties - data that does not link to another entity.
 
-
 ## Edges
 
 Edges are relationships between entities, and may also have associated properties to describe the relationship. Edges are directional.
+
+## Example Queries
+
+* identify the people with the most connections across divisions?
+* What organizations have connections with different populations?
+* 
