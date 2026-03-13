@@ -12,11 +12,15 @@ import yaml
 
 # special characters to remove from title for key
 special_chars = list(string.punctuation)
-nl = "\n"
-# print(f"special_chars: {special_chars}")
+nl = "\n" # new line
+date_fmt = "%Y-%m-%d %H:%M:%S" # date format for created/modified dates
+
+# get node schema to ensure valid records
 node_schema_uri = "https://gist.githubusercontent.com/ncbirdconservation/15ac248b1679dc25145fbc741621f07f/raw/conservation_kb_node_schema.json"
 response = requests.get(node_schema_uri)
 node_schema = response.json()
+
+# front matter for jekyll md pages
 front_matter_keys = [
     "key",
     "title",
@@ -26,78 +30,10 @@ front_matter_keys = [
     "properties",
     "tags"
 ]
-date_fmt = "%Y-%m-%d %H:%M:%S"
-
-
-
-# loop through keys in dict and convert to lowercase and replace spaces with _
-
-# def modify_dict_key(key):
-#     # pass text: lowercase, replace spaces with underscores
-#     return key.replace(" ", "_").lower()
-
-# def recurse_keys(d):
-#     result = {}
-#     for key, value in d.items():
-#         new_key = modify_dict_key(key)
-#         if isinstance(value, dict):
-#             # Recursively call the function for nested dictionaries
-#             result[new_key] = {}
-#             recurse_keys(value)
-#         elif isinstance(value, list):
-#             # Optionally handle lists which might contain dictionaries
-#             result[new_key] = []
-#             for item in value:
-#                 if isinstance(item, dict):
-#                     recurse_keys(item)
-#                 else:
-#                     result[new_key].append(item)
-#         else:
-#             result[new_key] = value
-#     return result
-
-# Setup connection to MongoDB
-# nodes = db.kb_nodes
-# edges = db.kb_edges
-# crosswalk = db.kb_crosswalk
-# dbs = db.kb_dbstatus
-
-# def find_key(item):
-#     # check crosswalk for disambiguation
-#     return ""
-
-# def check_data(key, type):
-
-#     q = {"key": key}
-#     p = {"_id": 0}
-
-#     # check current KB if exists, return current record
-#     if type == "node":
-#         result = list(nodes.find(q, p))[0]
-#     # elif type == "edge":
-#     #     result = list(edges.find(q, p))[0]
-#     else:
-#         print("entity not edge or node")
-#         pass
-
-    # return result
 
 class Node:
     def __init__(self, data = {}):
         self.key = ""
-        # self.short_key = ""
-        # self.title = ""
-        # self.url = ""
-        # self.type = ""
-        # self.description = ""
-        # self.citation = ""
-        # self.aliases = []
-        # self.tags = []
-        # self.properties = {}
-        # # self.timeline = []
-        # self.page = ""
-        # self.modified_date = ""
-        # self.created_date = ""
         self.db_record_present = False
         self.valid = False
         self.keys_to_remove = [
@@ -107,6 +43,7 @@ class Node:
             "db_node"
         ]
 
+        # process init data, determine if enough info to proceed
         if not (any(i in data for i in ["key", "title"])):
             print(f"Provide data with either 'key' or ('title' and 'type') values.")
         else:
@@ -127,10 +64,6 @@ class Node:
             # populate with passed data
             # either updates existing record, or creates new one
             self.populate(data)
-
-
-        # self.populate(data)
-
         
     def derive_key_from_title(self):
         if not self.type:
@@ -148,29 +81,6 @@ class Node:
         ## key
         key_list.insert(0, self.type.lower())
         self.key = "-".join(key_list)
-
-        # self.derive_short_key_from_title()
-    
-    # def derive_short_key_from_title(self):
-    #     result = self.title.lower()
-
-    #     for i in special_chars:
-    #         result.replace(i, "")
-        
-    
-    #     ## short key
-    #     sk = ""
-    #     sk_end = ""
-    #     sk_key_list = result.split(" ")
-    #     if sk_key_list[-1].isnumeric():
-    #         # last item is likely a year or date
-    #         # remove from list and append to short key
-    #         sk_end = sk_key_list.pop()
-        
-    #     for i in sk_key_list:
-    #         sk += i[0]
-    
-    #     self.short_key = sk + sk_end
 
     def validate_node(self):
         # check if current node conforms to node schema
@@ -220,16 +130,6 @@ class Node:
                 if changes:
                     print("Updates found, new values:")
                     print(changes)
-                    # update_existing = input(f"Update {self.title} database record (y/N)?")
-                    # if update_existing.lower() == "y":
-                    #     try:
-                    #         db.kb_node.update_one(
-                    #             {"key" : self.key},
-                    #             {"$set" : changes}
-                    #         )
-                    #         print("updated successfully!")
-                    #     except:
-                    #         print("update failed.")
                 else:
                     print("no changes found.")
             else: # no db record, return insert code
