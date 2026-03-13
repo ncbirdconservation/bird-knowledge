@@ -113,4 +113,19 @@ Edges are relationships between entities, and may also have associated propertie
 
 * identify the people with the most connections across divisions?
 * What organizations have connections with different populations?
-* 
+
+## US NABCI
+
+This is a potential project for [US NABCI](https://nabci-us.org) - operationalizing the ["napkin"](https://nabci-us.org/promoting-a-unified-voice-nabcis-national-bird-conservation-priorities/the-original-bird-conservation-napkin-diagram/#iLightbox[postimages]/0) diagram of bird conservation.
+
+### Platforms/Considerations
+
+* Add data to Wikipedia and Wikidata
+  * Can these resources perform graph network queries that go multiple depths and calculate centrality?
+* Custom design a system with MongoDB
+
+### Updating data
+
+* Hold quarterly meetings to bring links to the database. Attendees will provide information and data will be entered real-time, or soon after. Can morph into enabling folks to enter themselves, or to provide more structured data.
+* Web scraper
+* Meeting Notes scraper

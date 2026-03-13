@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gist.githubusercontent.com/ncbirdconservation/19dd046051e431f2ff66c6e85bbb3297/raw/conservation_kb_edge_schema.json",
+  "title": "Conservation Knowledge Base Edge Schema",
+  "description": "Edge/Relationship Schema for the Conservation Knowledge Base",
+  "type": "object",
+  "properties": {
+    "to" : {
+      "type" : "string",
+      "description": "The key of the source entity of the relationship."
+    },
+    "from" : {
+      "type" : "string",
+      "description": "The key of the target entity of the relationship."
+    },
+    "direction" : {
+      "type" : "number",
+      "description": "1 = one-way relationship, 2 = 2-way relationship"
+    },
+    "forward_verb": {
+      "type" : "string",
+      "description" : "Desribes the relationship to -> from."
+    },
+    "backward_verb": {
+      "type" : "string",
+      "description" : "Desribes the relationship from -> to."
+    },
+    "description" : {
+      "type" : "string",
+      "description" : "Free form text that describes this relationship."
+    },
+    "source" : {
+      "type" : "string",
+      "description" : "Where did this information come from?"
+    },
+    "modified_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

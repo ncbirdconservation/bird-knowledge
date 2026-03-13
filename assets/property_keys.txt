@@ -1,0 +1,49 @@
+﻿Has AOS4 Code
+Has Managment Need
+Is NC Present
+Has Publication Year
+Has eBird Code
+Has Organization
+Has Bird Group
+Has Community Type
+Has Partner
+Has Species Group
+Has Geography
+ Has Geography
+Has Order
+Has Genus
+Is WAP Knowledge Concern
+Has Habitat
+Has Publication Date
+Has State Status
+Was WAP Evaluated
+Has Common Name
+ Has Scope Of
+Has Audubon Conservation Plan
+Has AOS6 Code
+Has Family
+Present Breeding
+Has Avibase Code
+Has WAP15 ID
+Has AOS59 Code
+Has Species Taxonomy
+Has Priority Type
+Has Species
+Has AOS60 Code
+Has Text
+Has Federal Status
+Has Project Status
+Has PIF Pop Est
+Has Plan
+Is WAP Management Concern
+Has NCWAP15 Index
+Has Management Need
+Is Audubon Priority
+Is SGCN
+Has PIF Half Life
+Has Primary Author Organization
+Has Scientific Name
+Has Phenology
+Present Wintering
+Has Year
+Has Threat
