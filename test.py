@@ -121,42 +121,54 @@ priority_crosswalk = {
 # load from file
 with open("assets/conservation_connections.kb_nodes.json", "r", encoding="utf-8-sig") as file:
     kb_nodes = json.load(file)
-# with open("assets/updated_kb_nodes.json", "w", encoding="utf-8-sig") as file:
-#     kb_nodes = json.load(file)
 
-out_json = {}
-results = db.vertices.find(q, p).limit(2)
+out_json = []
+
+q = {}
+p = {}
+results = db.vertices.find(q, p)
 for v in results:
     
     q = {"title": v["title"]}
-    print(f"Checking for {v['title']}")
+    print(f"== Checking for {v['title']} ==", nl)
 
     # update
     # links -> properties
-    # wikitext -> pagen
+    # wikitext -> page
     # categories -> categories
 
     node_record = {
         "title" : v["title"],
         "type" : v["type"],
-        "page" : v["wikitext"]
+        "properties" : {}
     }
-    if ("properties" in v and v["properties"]):
-        node_record["properties"] = v["properties"]
-    if ("links" in v and v["links"]):
-        if "properties" not in node_record:
-            node_record["properties"] = {}
+    if "wikitext" not in v: 
+        node_record["page"] = ""
+    else:
+        node_record["page"] = v["wikitext"]
 
+    if "properties" in v:
+        # loop through and fix keys
+        for key, value in v["properties"].items():
+            node_record["properties"][priority_crosswalk[key]] = value
+
+    if ("links" in v and v["links"]):
         node_record["properties"]["links"] = v["links"]
 
     new_node = Node(data = node_record)
-    print(f"DB record present: {new_node.db_record_present}")
-    print(json.dumps(new_node.export_node_record(), indent=2))
-    
-    new_node.update_database()
+    # print(f"DB record present: {new_node.db_record_present}")
+    # print(json.dumps(new_node.export_node_record(), indent=2))
 
-    if input("Continue (y/N)?").lower() != "y":
-        break
+    out_json.append(new_node.export_node_record())
+
+
+    # new_node.update_database()
+
+    # if input("Continue (y/N)?").lower() != "y":
+    #     break
+
+with open("assets/updated_kb_nodes.json", "w", encoding="utf-8-sig") as file:
+    file.write(json.dumps(out_json, indent=2))
 
 exit()
 

@@ -31,6 +31,7 @@ front_matter_keys = [
     "tags"
 ]
 
+# node class
 class Node:
     def __init__(self, data = {}):
         self.key = ""
@@ -49,12 +50,15 @@ class Node:
         else:
             # check db for node record
             if "key" in data:
+                # add key to aliases
                 q = {"aliases":data["key"]}
             elif "title" in data:
+                # add title to aliases
                 q = {"aliases":data["title"]}
 
             if q:
-                node = list(db.kb_nodes.find(q, {"_id": 0}).limit(1))
+                # check database for node, download data to compare
+                node = list(db.nodes.find(q, {"_id": 0}).limit(1))
                     
                 if node:
                     print(node[0])
@@ -111,16 +115,26 @@ class Node:
             self.title = data["title"]
             self.derive_key_from_title()
         
+        # populate node with db data
+        if self.db_record_present:
+            for k, v in self.db_node.items():
+                if k != "key" : setattr(self, k, v)
+
+        # update node with new data
         for k, v in data.items():
             if k != "key": setattr(self, k, v)
 
         if not(self.db_record_present):
             # new record, add created/modified dates
             self.created_date = datetime.now().strftime(date_fmt)
-            self.modified_date = datetime.now().strftime(date_fmt)
+
+        self.modified_date = datetime.now().strftime(date_fmt)
 
         # validate record
         self.validate_node()
+
+    ###############################################################
+    ## Database checking and update functions
 
     def update_database(self):
         # check to see if current version if valid
@@ -195,7 +209,10 @@ class Node:
                                 set[f"{k}.{key}"] = value
                 return set
         else:
-            return False 
+            return False
+        
+    ###############################################################
+    ## Node Export Functions
 
     def export_node_record(self):
         # returns dict of node record wihtout admin variables
