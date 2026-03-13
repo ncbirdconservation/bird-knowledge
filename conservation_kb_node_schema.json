@@ -77,13 +77,16 @@
                     "title": {
                         "type": "string"
                     },
-                    "verb_forward": {
-                        "type": "string",
-                        "description": "Describes the relationship."
+                    "type": {
+                        "type": "string"
                     },
-                    "verb_backward": {
+                    "verb": {
                         "type": "string",
-                        "description": "Describes the relationship."
+                        "description": "Phrase that describes the relationship."
+                    },
+                    "properties" : {
+                        "type" : "object",
+                        "description" : "Additional properties to this relationship"
                     },
                     "description": {
                         "type": "string"

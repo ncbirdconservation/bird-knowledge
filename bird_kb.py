@@ -61,7 +61,7 @@ class Node:
                 node = list(db.nodes.find(q, {"_id": 0}).limit(1))
                     
                 if node:
-                    print(node[0])
+                    # print(node[0])
                     self.db_record_present = True
                     self.db_node = node[0]
 
@@ -179,12 +179,13 @@ class Node:
             del curr_node["key"]
             print("checking curr node:")
             print(json.dumps(curr_node, indent=2))
+
             # check for changes, build set code if any
             if db_node == curr_node:
                 print("no changes found!")
                 return False
             else:
-                # check for updated keys
+                # check for updated dict keys, values
                 set = {}
                 for k, v in db_node.items():
                     if k in curr_node:

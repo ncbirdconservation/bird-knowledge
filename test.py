@@ -101,110 +101,48 @@ priority_crosswalk = {
 "Was WAP Evaluated" : "NC WAP 2015 Evaluated"
 }
 
-###########################################################
-## add key and title to alias array for all nodes
-
-# nodes = db.kb_nodes.find({},{"_id": 0, "title": 1, "key": 1})
-
-# for n in nodes:
-#     aliases = list(n.values())
-#     print(f"aliases: {aliases}")
-#     q = {"key": n["key"]}
-#     u = {"$set" : {"aliases": aliases}}
-#     db.kb_nodes.update_one(q, update=u, upsert=True)
-
-# exit()
-
-###########################################################
-## retrieve add missing nodes from vertices in kb_nodes
-# download all vertices
-# load from file
-with open("assets/conservation_connections.kb_nodes.json", "r", encoding="utf-8-sig") as file:
-    kb_nodes = json.load(file)
-
-out_json = []
-
-q = {}
-p = {}
-results = db.vertices.find(q, p)
-for v in results:
-    
-    q = {"title": v["title"]}
-    print(f"== Checking for {v['title']} ==", nl)
-
-    # update
-    # links -> properties
-    # wikitext -> page
-    # categories -> categories
-
-    node_record = {
-        "title" : v["title"],
-        "type" : v["type"],
-        "properties" : {}
-    }
-    if "wikitext" not in v: 
-        node_record["page"] = ""
-    else:
-        node_record["page"] = v["wikitext"]
-
-    if "properties" in v:
-        # loop through and fix keys
-        for key, value in v["properties"].items():
-            node_record["properties"][priority_crosswalk[key]] = value
-
-    if ("links" in v and v["links"]):
-        node_record["properties"]["links"] = v["links"]
-
-    new_node = Node(data = node_record)
-    # print(f"DB record present: {new_node.db_record_present}")
-    # print(json.dumps(new_node.export_node_record(), indent=2))
-
-    out_json.append(new_node.export_node_record())
-
-
-    # new_node.update_database()
-
-    # if input("Continue (y/N)?").lower() != "y":
-    #     break
-
-with open("assets/updated_kb_nodes.json", "w", encoding="utf-8-sig") as file:
-    file.write(json.dumps(out_json, indent=2))
-
-exit()
-
-###########################################################
-
 
 ###########################################################
 ## retrieve edges, create relationships in kb_nodes
 
-# # download all edges
-# q = {}
-# p = {}
+# convert edge type to proper case
+def convert_edge_type(t):
+    return t.replace("_", " ").title()
 
-# results = db.edges.find(q, p).limit(10)
+# download all edges
+q = {}
+p = {}
 
-# edge_count = 0
-# for i in results:
-#     print(f"edge: {i}")
+results = db.edges.find(q, p).limit(3)
 
-#     # get to/from entities from kb_nodes
-#     q = {"title": {"$in" : [i["from"], i["to"]]}}
-#     p = {"type": 1, "key": 1, "title": 1}
+edge_count = 0
+for e in results:
+    print("edge: ")
+    print(e)
 
-#     matching_nodes = db.kb_nodes.find(q, p)
-#     for n in matching_nodes:
-#         print(f"node: {n}")
+    # build relationship object
+    rel_dict = {
+        "title" : e["from"],
+        "relationships" : [
+            {
+                "key" : "",
+                "title" : e["to"],
+                "verb" : convert_edge_type(e["type"])
+            }
+        ]
+    }
+    print(json.dumps(rel_dict, indent=2))
+    # create node from the from field
+    from_node = Node(rel_dict)   
+    print(f"From node on db? {from_node.db_record_present}")
+    print(json.dumps(from_node.export_node_record(), indent=2))
 
-#     edge_count += 1
-#     if edge_count >1: break
+    edge_count += 1
+    if edge_count >1: break
 
-# exit()
+exit()
 
 ###########################################################
-
-
-
 
 
 # Get test nodes from JSON
