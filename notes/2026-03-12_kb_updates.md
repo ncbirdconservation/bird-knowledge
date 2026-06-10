@@ -35,5 +35,44 @@ nodes:
                 verb_forward: "is employed by"
                 verb_backward: "employs"
                 source: "Scott K. Anderson"
+    organization-ewgpif-full-annual-cycle-subcommittee:
+        title: Eastern Working Group Partners in Flight Full Annual Cycle Planning Subcommittee
+        short-key: ewgpif-facct
+        type: Organization
+        categories: ["subcommittee"]
+        relationships:
+            ewgpif-facct|is led by|beckystewart:
+                title: Becky Stewart
+                type: Person
+                verb: is led by
+                source: "Scott K. Anderson"
+    person-becky-stewart:
+        title: Becky Stewart
+        type: Person
+        properties:
+            title: Wildlife Biologist
+        relationships:
+            beckystewart|leads|ewgpif-facct:
+                title: "Eastern Working Group Partners in Flight Full Annual Cycle Planning Subcommittee"
+                type: Organization
+                verb: leads
+                source: "Scott K. Anderson"
+            beckystewart|is employed by|environment-and-climate-change-canada:
+                title: "Environment Climate Change Canada"
+                type: Organization
+                verb: is employed by
+                source: "Scott K. ANderson"
+    organization-environment-climate-change-canada:
+        title: Environment Climate Change Canada
+        type: Organization
+        categories: [governmental, national]
+        relationships:
+            environment-climate-change-canada|has geogrphy|canada:
+                title: "Canada"
+                type: "Geography"
+                verb: has geography
+                source: "Scott K. Anderson"
+            
+
 ```
 
