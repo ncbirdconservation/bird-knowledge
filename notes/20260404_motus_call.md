@@ -1,7 +1,7 @@
 ---
-title: "2026-05-03 NC Motus Meeting"
+title: "2026-04-04 NC Motus Meeting"
 author: "Scott K. Anderson"
-date: "2026-05-03"
+date: "2026-04-04"
 type: meeting-notes
 organization: "NC Motus Working Group"
 frequency: "occasional"

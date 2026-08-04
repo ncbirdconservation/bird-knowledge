@@ -343,8 +343,6 @@ nodes:
           title: DJ Case and Associates
     resource-avian-knowledge-network:
       title: "Avian Knowledge Network"
-    
-
 ```
 
 
