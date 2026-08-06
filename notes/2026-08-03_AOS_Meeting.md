@@ -439,3 +439,164 @@ task: are there any B-Corp in NCASI?
 
 Andrew Cox
 
+- unprecedented oil spill
+- ~$500 million for bird restoration
+- Dauphin Island acquisition, includingmanagement funding
+- Nesting/foraging habitat restoration/creation
+  - AMOY - built 5 nesting island, 5 intertidal reefs - expected to last decades
+  - built 5 acre island to host 7K pairs of colonial waterbirds
+    - cool design, built barrier, filled in some of interior, left one gap in barrier for beach inside protective walls
+  - Breton Island restoration in LA - 136 acres added, 27K pairs of nesting birds
+    - hope to get 20-30 years of investment
+  - Chandeleur islands - 2.5K acres, >10K birds, $400 million! - uses different plots of funding
+- 8K acres of conservation easements in Prairie potholes
+- Seabird bycatch reduction in NW Atlantic - shearwaters and gannets
+- vegetation mgmt and social attraction in the Dry Tortugas
+- non-native spp removal from Puerto Rico Island
+
+Conclusion: this is only a fraction. "Adding decades of additional life to habitat for 10s of thousands of shorebirds/waterbirds".
+Partnership driven - very beurocratic, but work gets done.
+
+#### Questions
+
+- info about spill? Yep, there is a website.
+
+> Add events to the knowledge graph?
+
+### Restoration of Common Loons in MN
+
+Tim Mitchell (MN)
+
+- Migration research funded by State Lottery!
+- Evidence that MN Loons were affected by the Deepwater Horizon Oil Spill
+- Activities
+  - acquired and protected lakeshore nesting/foraging habitat - 6 parcels/7 miles of shoreline - leveraged partnerships b/c shoreline parcels in demand!
+  - laka ssociation outreach - citizen monitoring; 50+ lake mgmt plans; be loon aware
+  - Artificial nesting platforms (ANP) installation
+    - doing research to refine process
+    - higher productivity; 42% usage (adoption increased over successive years)
+  - reduce lead exposure through nontoxic tackle advocacy
+- Diversified, creative funding
+  - license plates
+  - ML soccor team with
+  - stae lottery
+
+
+### La Playa que Vuela: Community-Based Monitoring and Avitourism as a Conservation Strategy
+
+Balalantyne Puin Castano
+LinkedIn: ballantyne-puin
+
+- Columbia: biodiverse, multiethnic, and multicultural
+- Location:Buenaventural, Punta Soldado Island
+- Coastal erosion transformed the landscape, losing shorebird habitat
+- 2022, 2025, beach was restored, shorebirds returned
+  - Tourism emerged as a new economic opportunity
+- How to create a sustainable business model?
+  - 2023 discovered birds
+  - 2024: learned to observe/identify them
+  - 2025: we became their guardians - community-based monitoring
+  - cross sectoral collab (local; NGOs, logal gov, etc)
+- 15 shorebird species recorded
+- Threats: garbage, dogs, 
+- promoting ecotourism for the area
+- Conclusions
+  - youth are the key drivers of conservation and local stewardship
+    - "we were never told we could be part of the solution"
+  - community-based monitoring
+  - sustainable livelihood models are essential to ensure long-term consrvation
+- Looking ahead
+  - high levels of unmet basic needs remain a major challenge
+  - Mental health, well-being, and conflict resolution are essential fo sustaining community-led conservation
+- work with commuity 
+
+### Boring Name, INspired Work: Bird Conservation Investment Strategies
+
+Becky Stewart
+
+Using the approach of CIS to advance landscape scale conservation for birds - outcome-based plans, multiple priorities
+
+- Need many birds in decline, scale is large, no on can do it alone;
+- Key Components  
+  - most use Conservation Standards
+  - led by Latin American Orgs
+  - outcome-driven: "by 2033, increase tree cover by 27,500 ha in SA and 9,800 ha in CA within mid-elevation forests
+  - Common goals for multiple priorities
+  - eEnable collab at scale
+  - funder update 
+
+### Piping Plovers on urban Beaches: A conservation Success Story in Massachusetts
+
+Drew Vitz
+
+- Example: Revere Beach SP - hihgly urban, near T Stop, 2.5 miles of beach
+- Analyzed productivity and nesting fino over 2015 - 2025 for multiple sites in MA
+- urbanization positively associated with nest survival
+- Exclosures - 84% ireduction in nest failure
+- Nest survival probabliity decreases over season
+- no effect detected with nest overwash and abandonment rate
+- strong negative trend in productivity, but 10.8% annual increase over the time period
+
+
+# 8/5 AOS
+
+## Plenary
+
+### Stopover research
+
+Fengyi Guo (Freda)
+fg329@cornell.edu
+@fyguo.bsky.social
+
+- radar analysis indicates that stopover habitat ofr landbirds is highly associated with forest patches
+  - some of these patches are sometimes not considered important for breeding, due to the presence of predators
+  - note that birds who don't rely on forests (e.g., grassland birds) likely don't benefit from forest stopover
+- The corn belt is an antrhopogenic migration barrier
+- ongoing work on population trends during sopover to identify drivers of declines
+- Working Lands fo rWildlife
+  - 66.7% of identified hotspots are not protected areas.
+    - collaborating with NRCS for WLFW program - provides financial/technical assistance to working lands
+    - stopover hotspots will be used as ranking criteria for Deciduous Forest Framework (DFF)
+    - First time landbird stopover sits will be used in national conservation planning
+    - 
+
+> big gaps in the radar coverage. Any work to identify other sources that might help fill in the gaps?
+
+### Farming with the flock: Redesigning agricultural systems for people and nature
+
+Olivia M. Smith
+Michigan State University
+
+- Agriculture has expanded 5x over the last 300 yr
+  - largest biome on earth (38%)
+- Trends
+  - larger field size (fewer edges)
+  - less diverse plantings
+- Ecosystem services
+  - cultural - people like them around
+  - pollination, pset control, etc.
+- Some harmful effectsa as well, eating eating products scat on crops
+- Surveyed 58 famrs from WA to California 1
+
+## NCBA Data Review Discussion With Julie Hart and John C
+
+[See notes in this document](https://ncconnect.sharepoint.com/:w:/r/sites/WRC_NCBirdAtlas/Shared%20Documents/Science%20Subcommittee/ebird_data_review/NCBA%20Records%20Review%20Notes.docx?d=wc9b197c2ff2b477fba9c151cbd40b8a6&csf=1&web=1&e=pjugT9)
+
+## SECLP Coaches Call
+
+## PIF Steering Committee Call
+
+# 8/6 AOS
+
+## Columbia Talk
+
+- Using morphology from AMNH 1911 collection to modern collection to investigate relationships between morphology and changes in the landscape over the same landscape.
+  - deforestation, etc.
+- Lowlands app have shorter wings
+- longer tails in 61% of populations across all localities
+- What might be th eeffects (locality, evolutionary history heat exchange hypothesis)?
+  - heat exchange - hotter climate selects for smaller spp
+- 60% of populations, wing length decreased in related to tail length (longer tails)
+  - usually translates to maneoueverability
+
+## 
