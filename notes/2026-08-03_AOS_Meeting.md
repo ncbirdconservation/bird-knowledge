@@ -599,4 +599,64 @@ Michigan State University
 - 60% of populations, wing length decreased in related to tail length (longer tails)
   - usually translates to maneoueverability
 
-## 
+## Desired Future Conditions Framework - Missouri River HIlls
+
+Joeseph Moseley
+Advisor: Tom Bonnot
+
+- Landscape Management Challenges
+  - Resource restrictions
+  - Qualitative targets
+  - Competing habitat goals
+- Missouri River Hills - oak0hickory dominatied uplands; historic conservation initiatives and species like RUGR
+  - mostly private, some game land holdings
+- Habitat Suitability Index
+  - Structure; Composition; Context -> HSI composite score
+  - 1.0 condituions fully meet needs; 0.0 meets no needs
+- RUGR rate poorly; EWPW has much higher - what scenario makes it somewhat suitable for both?
+
+
+## Bird-Friendly Futures: Linking Science & Empathy in Successful Bird-Safe Building Advocacy
+
+Meredith Barges - PhD Candidate SUNY
+Viveca Morris - Exec Dir - Yale Bird-Friendly Building Initiative
+Richard Fadok - Rochester Institute of Technolgy
+Nick Lund - ME Audubon
+
+
+### How did you become involved in this issue?
+
+Richard - cultural anthropologist
+
+
+> What does it mean to give an invitation to participate in the work of living more in collaboration with the natural environment? How to change perspective that we are separate from nature?
+
+> Interested in how to leverage this issue into a larger narrative about the acknowledgement of our impacts while working more in line with natural services.
+
+``` yaml
+idea: start collection of bird strike birds at WRC HQ? Partner with NCSU to taxidermy birds?
+idea: NatureCounts can log dead birds - great platform for a universal bird collision survey database?
+```
+
+### How to link science and empathy?
+
+- avoid "cost per bird" - put into context of # of birds killed for the lifetime of the building
+- scaling collisions to the human scale - in the time for this session 175,000 birds killed (averaged out over city)
+- empathy works better than statistics
+  - photos of dead birds - in hand
+  - engaging people in the drama of bird life
+  - our society doesn't like death
+
+### Remember a time when an image/data helped someone understand the problem?
+
+- "guilt and shame works well"
+
+### What do you think is the new frontier of science to advance bird collision policy?
+
+- better detail about targeted treatment.
+- better bird safe glass
+- how do you get a bill passed? how do you convince a legislator?
+  
+> Meredith: who are bird friendly buildings for?
+
+> How do we hold empathy while acknowledging our unavoidable impact on birds?
