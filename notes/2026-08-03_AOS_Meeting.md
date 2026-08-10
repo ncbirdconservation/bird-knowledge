@@ -660,3 +660,6 @@ idea: NatureCounts can log dead birds - great platform for a universal bird coll
 > Meredith: who are bird friendly buildings for?
 
 > How do we hold empathy while acknowledging our unavoidable impact on birds?
+
+# 8/7 AOS
+
