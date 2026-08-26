@@ -6,6 +6,13 @@ type: meeting-notes
 organization: "Eastern Working Group Partners in Flight"
 tags: [AOS, EWG PIF]
 ---
+# Summary
+
+- Bird Collisions - 
+- Southern Wings - presented on the benefits of the Southern Wings Program
+- John/Scott met with Julie Hart (NY) - great help thinking through review of data - will help us out significantly to speed our process.
+- PIF - participated in a roundtable discussion, recruiting folks to Partners in Flight
+
 # 8/3 EWG PIF Meeting
 
 [See agenda here](https://docs.google.com/document/d/16aW3D4W7hb0-s1VZ1pbN4zmuAqVOfPWy/edit)
@@ -663,3 +670,4 @@ idea: NatureCounts can log dead birds - great platform for a universal bird coll
 
 # 8/7 AOS
 
+  `
